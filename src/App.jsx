@@ -15,10 +15,15 @@ import {
   Sparkles,
   Star,
   Truck,
-  Warehouse,
 } from 'lucide-react'
 import heroTruck from './assets/hero-truck.jpeg'
 import logo from './assets/father-son-logo.jpeg'
+import galleryBedroomCleanout from './assets/gallery-bedroom-cleanout.jpg'
+import galleryHallwayChairRemoval from './assets/gallery-hallway-chair-removal.jpg'
+import galleryMattressRemoval from './assets/gallery-mattress-removal.jpg'
+import galleryMiniFridgeRemoval from './assets/gallery-mini-fridge-removal.jpg'
+import galleryOfficeDeskCleanout from './assets/gallery-office-desk-cleanout.jpg'
+import galleryYardFurnitureRemoval from './assets/gallery-yard-furniture-removal.jpg'
 import workDoneCleanoutRoom from './assets/work-done-cleanout-room.jpeg'
 import workDoneHallway from './assets/work-done-hallway.jpeg'
 import workDoneSideYard from './assets/work-done-side-yard.jpeg'
@@ -51,19 +56,9 @@ const services = [
     icon: Leaf,
   },
   {
-    title: 'Pressure Washing',
-    text: 'Driveways, patios, walkways, siding, and exterior surfaces refreshed with a clean professional finish.',
-    icon: Sparkles,
-  },
-  {
     title: 'Window Cleaning',
     text: 'Clear, streak-free window cleaning for brighter homes, storefronts, suites, and rental properties.',
     icon: CheckCircle2,
-  },
-  {
-    title: 'Gutter Cleaning',
-    text: 'Leaves, debris, and buildup cleared so your gutters can drain properly through wet weather.',
-    icon: Warehouse,
   },
   {
     title: 'Roof Cleaning',
@@ -86,149 +81,21 @@ const reasons = [
   ['Fast response', 'Same-day and next-day appointments are available for urgent junk removal and cleanup jobs.', Clock],
 ]
 
-const reviews = [
-  {
-    name: 'Bernadette Hadisandjaja',
-    rating: 5,
-    date: '4 days ago',
-    text: `I had a great experience with Father & Son Junk Removal. They were incredibly fast, efficient, and professional from start to finish. I needed some large items removed, and they handled everything smoothly without any hassle. On top of that, they offered the best price compared to others I looked into, which was a huge bonus. Highly recommend them if you're looking for reliable and affordable junk removal!`,
-  },
-  {
-    name: 'Sara m',
-    rating: 5,
-    date: 'a week ago',
-    text: 'Harpreet arrived immediately, when contacted.. assisted me in junk removal at rental property. Tenants left a mess. They finished the job in one day. Reliable, punctual and reasonable price.',
-  },
-  {
-    name: 'Karla McCullagh',
-    rating: 5,
-    date: 'a week ago',
-    text: `I had a great experience with Father & Son Junk Removal. They were incredibly fast and efficient from start to finish. What really stood out was how they took the time to sort through everything, making sure usable items were set aside and donated rather than just thrown away. It's clear they care about reducing waste and helping others. They also did an excellent job cleaning up after the removal, leaving the space spotless and ready to use. Professional, respectful, and thorough, I wouldn't hesitate to recommend Father & Son Junk Removal to anyone looking for reliable service.`,
-  },
-  {
-    name: 'Nandhini Ramachandran',
-    rating: 5,
-    date: '2 weeks ago',
-    text: 'Harpreet Singh is very nice landscaper to work with .He and his family is very sincere and dedicated to work . I would highly recommend.',
-  },
-  {
-    name: 'Jennifer Yang',
-    rating: 5,
-    date: '2 weeks ago',
-    text: 'Extremely careful and precise in their work. Highly professional.',
-  },
-  {
-    name: 'Léo Lavoie',
-    rating: 5,
-    date: '3 weeks ago',
-    text: 'They did a very good job removing my 3 places couch. No damage in my apartment or hall way. Very professional. Highly recommand them .',
-  },
-  {
-    name: 'c zz',
-    rating: 5,
-    date: '3 weeks ago',
-    text: 'I would highly recommend this company, they are very affordable and dependable. They have great prices as well. I will recommend them To anyone, they do everything!!! Thank you for everything',
-  },
-  {
-    name: 'dheraya arora',
-    rating: 5,
-    date: '4 weeks ago',
-    text: 'Really good service👍🫡',
-  },
-  {
-    name: 'David Lee',
-    rating: 5,
-    date: '4 weeks ago',
-    text: 'Great timely service and made everything nice easy and great rate. Highly recommend and will use again in future',
-  },
-  {
-    name: 'Paola Camacho',
-    rating: 5,
-    date: 'a month ago',
-    text: `We scheduled for same day pick up Komal and Happy are were friendly, courteous, respectful. Awesome service, extremely well-priced and you saved us hours of work. Call them. You won't be disappointed.`,
-  },
-  {
-    name: 'K R Pacheco',
-    rating: 5,
-    date: 'a month ago',
-    text: 'Very professional and respond quickly. Went above and beyond to get everything done quickly.',
-  },
-  {
-    name: 'RJ',
-    rating: 5,
-    date: 'a month ago',
-    text: 'Very quick turn around. Easy to talk to and very pleasant to work with and good at communication. Highly recommend',
-  },
-  {
-    name: 'Mamta Bhatia',
-    rating: 5,
-    date: 'a month ago',
-    text: 'Fantastic service! I needed an old sofa removed quickly. The team arrived on time, was very professional, and hauled everything away in minutes. Fair pricing and hassle-free. Highly recommend!',
-  },
-  {
-    name: 'Marg Yeo',
-    rating: 5,
-    date: 'a month ago',
-    text: 'Prompt and energetic young couple providing fast and efficient removal service.',
-  },
-  {
-    name: 'Roman Guramishvili',
-    rating: 5,
-    date: 'a month ago',
-    text: 'Great service from Father and Son Junk Removal! They responded fast, came on the same day and helped with the post construction junk disposal.',
-  },
-  {
-    name: 'Simranjeet Singh',
-    rating: 5,
-    date: 'a month ago',
-    text: 'Had a great experience and the service was excellent. They did the job perfectly and it was all hassle free. Would definitely recommend to others.',
-  },
-  {
-    name: 'Manjot Kaur',
-    rating: 5,
-    date: 'a month ago',
-    text: 'Wonderful work with reasonable price.',
-  },
-  {
-    name: 'Satvir Bisla',
-    rating: 5,
-    date: '2 months ago',
-    text: 'Very nice people.Harpreet is very confident and hardworking.highly recommended.',
-  },
-  {
-    name: 'Karan Gill',
-    rating: 5,
-    date: '2 months ago',
-    text: 'Happy with the service. Will use them again in the future',
-  },
-  {
-    name: 'Jaskaran Sandhar',
-    rating: 5,
-    date: '2 months ago',
-    text: 'I called Father and Son Junk Removal last minute, and they showed up within 30 minutes! They gave me the price upfront with no hidden or extra fees — not even an environmental charge. They cleared out a full load from my back yard quickly and professionally. Great service, super reliable, and honest pricing. I highly recommend them!',
-  },
-  {
-    name: 'Kamalpreet Singh',
-    rating: 5,
-    date: '2 months ago',
-    text: 'Great service by Father son duo 👌',
-  },
-]
-
 const galleryImages = [
   heroTruck,
   workDoneCleanoutRoom,
   workDoneYardCleanout,
   workDoneSideYard,
   workDoneHallway,
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80',
+  galleryOfficeDeskCleanout,
+  galleryMattressRemoval,
+  galleryMiniFridgeRemoval,
+  galleryBedroomCleanout,
+  galleryYardFurnitureRemoval,
+  galleryHallwayChairRemoval,
 ]
 
-const serviceAreas = ['Surrey', 'Delta', 'Langley', 'White Rock', 'Burnaby', 'Coquitlam', 'Abbotsford']
+const serviceAreas = ['Surrey', 'Delta', 'Langley', 'White Rock', 'Burnaby', 'Coquitlam', 'Abbotsford', 'Vancouver', 'Richmond', 'New Westminster', 'Port Moody', 'Port Coquitlam']
 
 const formFields = [
   { label: 'Name', name: 'name', type: 'text', autoComplete: 'name' },
@@ -255,16 +122,6 @@ function LogoMark({ compact = false }) {
       alt={`${businessName} logo`}
       className={`${compact ? 'h-12 w-12' : 'h-14 w-14'} shrink-0 rounded-lg bg-white object-contain p-1 shadow-sm ring-1 ring-zinc-200`}
     />
-  )
-}
-
-function ReviewStars({ rating }) {
-  return (
-    <div className="flex text-emerald-300">
-      {Array.from({ length: rating }).map((_, index) => (
-        <Star key={index} size={18} fill="currentColor" aria-hidden="true" />
-      ))}
-    </div>
   )
 }
 
@@ -318,7 +175,7 @@ function App() {
                 Fast Junk Removal. Same-Day Service. No Stress.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
-                {businessName} handles junk removal, yard care, pressure washing, windows, gutters, and roof cleaning with honest quotes and careful cleanup.
+                {businessName} handles junk removal, yard care, window cleaning, roof cleaning, and cleanouts with honest quotes and careful cleanup.
               </p>
               <div className="mt-6 inline-flex rounded-lg border border-emerald-300/30 bg-emerald-400/10 px-4 py-3 text-base font-black text-emerald-200 sm:text-lg">
                 Junk removal service starts from $80
@@ -480,20 +337,11 @@ function App() {
             <SectionHeading
               kicker="Google reviews"
               title="What Our Customers Say."
-              text="Real customer reviews from Google, copied without owner responses."
+              text="Live Google reviews are loaded here automatically."
               dark
             />
-            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {reviews.map(({ name, rating, date, text }) => (
-                <article key={`${name}-${text}`} className="rounded-lg border border-white/10 bg-white/10 p-6">
-                  <div className="mb-4 flex items-center justify-between gap-4">
-                    <ReviewStars rating={rating} />
-                    <span className="text-sm font-bold text-zinc-400">{date}</span>
-                  </div>
-                  <p className="leading-7 text-zinc-100">"{text}"</p>
-                  <p className="mt-5 font-black text-white">{name}</p>
-                </article>
-              ))}
+            <div className="rounded-lg border border-white/10 bg-white p-4 text-zinc-900 shadow-xl sm:p-6">
+              <div className="elfsight-app-39dc0b7c-1435-4719-b9ab-14ca883af4b5" data-elfsight-app-lazy></div>
             </div>
           </div>
         </section>
@@ -624,6 +472,9 @@ function App() {
         </div>
         <p className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-sm text-zinc-500">
           &copy; 2026 {businessName}. All rights reserved.
+        </p>
+        <p className="mx-auto mt-3 max-w-7xl text-sm font-bold text-zinc-500">
+          Created by Kang Software
         </p>
       </footer>
       <a
